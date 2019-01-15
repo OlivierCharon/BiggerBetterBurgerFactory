@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-12">
+      <input class="form-control" type="text" [(ngModel)]="cityName">
+      <button class="btn btn-success" (click)="getWeather()">Ok !</button>
+    </div>
+  </div>
+  <h1 *ngIf="data">{{ data?.main.temp }}°C</h1>
+  <div class="alert alert-danger" *ngIf="!isDataFound">
+    Data not found !
+  </div>
+  
